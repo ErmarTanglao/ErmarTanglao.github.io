@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+	</head>
+<body>
+	<a-scene embedded arjs>
+		<a-assets>
+			<a-asset-item id='object' src='Assets/Shiba.obj'></a-asset-item>
+			<a-asset-item id='texture' src='Assets/Shiba.mtl'></a-asset-item>
+			<!-- <img id='1' src='Assets/Background.png'>
+			<img id='2' src='Assets/Text.png'>
+			<img id='3' src='Assets/Black.png'>
+			<img id='4' src='Assets/Symbol.png'> -->
+		</a-assets>
+		
+		<a-marker preset='hiro'>
+			<!-- Paralax Logo -->
+			<!-- <a-image src="#1" width="1" height="1" position ="0.75 2.0 0" rotation ="-90 0 0" ></a-image>
+			<a-image src="#2" width="1" height="1" position ="0.75 2.1 0" rotation ="-90 0 0" ></a-image>
+			<a-image src="#3" width="1" height="1" position ="0.75 2.2 0" rotation ="-90 0 0" ></a-image>
+			<a-image src="#4" width="1" height="1" position ="0.75 2.3 0" rotation ="-90 0 0" ></a-image> -->
+
+			<!-- <a-obj-model src='#object' mtl='#texture' position ="0.5 4 0" rotation ="-90 0 0" onclick="myFunction()" ></a-obj-model> -->
+			<a-plane height="1" width="2" color ="grey" position ="0 2 0" rotation ="-90 0 90"> </a-plane>
+			<!-- <a-image src="https://i.imgur.com/EkLf5Lp.jpg?1" width="0.5" height="0.75" position ="0.75 2.05 0" rotation ="-90 0 0" ></a-image> -->
+			<a-text value="\n\anran  Zhou" position="0 2.05 0" height="1" width="1" color="white" rotation ="-90 0 0"> </a-text>
+
+		</a-marker>
+
+		<!-- <a-marker-camera preset='hiro'>
+			<a-cursor color="#FF0000" position="0 0 -1"></a-cursor>
+		</a-marker-camera> -->
+
+		<!-- <a-camera position="0 7 5">
+			<a-cursor color="#FF0000" position="0 0 -1"></a-cursor>
+		</a-camera> -->
+
+		<a-entity camera>
+			<a-cursor color='#ffba70'position='0 0 -1'></a-cursor>
+		  </a-entity>
+	</a-scene>
+</body>
+
+<script>
+  
+	function myFunction() {
+		location.replace("https://www.youtube.com/")
+	}
+	
+</script>
+
+</html>
